@@ -13,5 +13,5 @@ Server side for an application to learn new subjects. When given a subject, it w
 - Clone the project
 - Create a folder at the root called 'secret'
 - Create a file named youtube.api that contains the API key
-- Run 'flask run' in the terminal
+- Run 'export FLASK_APP=main' then 'flask run' in the terminal
 
