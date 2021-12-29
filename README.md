@@ -1,7 +1,21 @@
 # InformedXYZ
 
+Application to learn new topics. When given a topic, it will search and find youtube videos, posts on twitter, articles on that topic using different APIs.
+
+## Client
+Client side of the application written in typescript. 
+
+### Technologies used
+- Angular (with PrimeNg)
+- Bootstrap
+
+### Get started
+- Go to the client folder
+- Make sure the angular cli is installed and all dependencies are installed (install from package.json)
+- Run ```ng serve```
+
 ## Server
-Server side for an application to learn new subjects. When given a subject, it will search and find youtube videos, posts on twitter, articles on that subject. </br></br>
+Server side of the application written in python. 
 
 ### Technologies used
 - Flask
