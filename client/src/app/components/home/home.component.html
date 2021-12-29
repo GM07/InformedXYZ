@@ -1,0 +1,18 @@
+
+<div class="input-group" id="search_bar">
+    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+    aria-describedby="search-addon" [(ngModel)]="query" (keyup.enter)="search()"/>
+    <button type="button" class="btn btn-primary" (click)="search()">Search</button>
+</div>
+<div *ngIf="loading" class="spinner-border text-primary" role="status"></div>
+
+<p-carousel [value]="videos" [numVisible]="3" [numScroll]="1">
+    <ng-template let-video pTemplate="video">
+        <div class="video-item">
+            <div class="video-item-content">
+                <div [innerHTML] = "video.html | sanitizeHtml" ></div>
+                <a [href]="video.url"> {{ video.title }} </a>
+            </div>
+        </div>
+    </ng-template>
+</p-carousel>

@@ -1,11 +1,12 @@
-from flask import Flask
-from flask import jsonify
+from flask import Flask, jsonify
+from flask_cors import CORS
 from markupsafe import escape
 from werkzeug.utils import redirect
 
 from youtube_api import YoutubeApi
 
 app = Flask(__name__)
+CORS(app)
 
 youtube_api_file = open('secret/youtube.api', 'r')
 youtube_key = youtube_api_file.read()
@@ -26,4 +27,3 @@ def youtube_search_subject(subject):
     global youtube
     results = youtube.get_videos_by_subject(subject)
     return jsonify(list(map(lambda x: x.toJson(), results)))
-
